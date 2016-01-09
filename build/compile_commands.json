@@ -1,0 +1,61 @@
+[
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DGLFW_INCLUDE_NONE -DLIBASYNC_STATIC -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network    -pthread -o CMakeFiles/asioclient.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DGLFW_INCLUDE_NONE -DLIBASYNC_STATIC -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network  -g -std=c++1z -fcolor-diagnostics   -pthread -o CMakeFiles/asioclient.dir/examples/asio/client.cpp.o -c /home/maik/projects/breeze/examples/asio/client.cpp",
+  "file": "/home/maik/projects/breeze/examples/asio/client.cpp"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DGLFW_INCLUDE_NONE -DLIBASYNC_STATIC -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network    -pthread -o CMakeFiles/asioserver.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DGLFW_INCLUDE_NONE -DLIBASYNC_STATIC -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network  -g -std=c++1z -fcolor-diagnostics   -pthread -o CMakeFiles/asioserver.dir/examples/asio/server.cpp.o -c /home/maik/projects/breeze/examples/asio/server.cpp",
+  "file": "/home/maik/projects/breeze/examples/asio/server.cpp"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network    -o CMakeFiles/ecs.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network  -g -std=c++1z -fcolor-diagnostics   -o CMakeFiles/ecs.dir/examples/ecs/main.cpp.o -c /home/maik/projects/breeze/examples/ecs/main.cpp",
+  "file": "/home/maik/projects/breeze/examples/ecs/main.cpp"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network    -o CMakeFiles/glad.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DGLFW_INCLUDE_NONE -DLIBASYNC_STATIC -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network  -g -std=c++1z -fcolor-diagnostics   -pthread -o CMakeFiles/graphics.dir/examples/graphics/main.cpp.o -c /home/maik/projects/breeze/examples/graphics/main.cpp",
+  "file": "/home/maik/projects/breeze/examples/graphics/main.cpp"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network    -o CMakeFiles/sdltest.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glfw/include -I../dependencies/glad/GL/include -I../dependencies/glm -I../dependencies/SDL-mirror/include -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -I../dependencies/asyncplusplus/include -I../dependencies/asio/asio/include -I../dependencies/enet/include -I../dependencies/serialization/include -I../dependencies/msgpack-c/include -isystem ../dependencies/stb -I../src -I../src/util -I../src/window -I../src/network  -g -std=c++1z -fcolor-diagnostics   -o CMakeFiles/sdltest.dir/examples/sdl2/main.cpp.o -c /home/maik/projects/breeze/examples/sdl2/main.cpp",
+  "file": "/home/maik/projects/breeze/examples/sdl2/main.cpp"
+}
+]

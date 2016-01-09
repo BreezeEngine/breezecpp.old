@@ -1,0 +1,25 @@
+[
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCTTI_STRING_MAX_LENGTH=1000 -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glad/GL/include -I../dependencies/glfw/include -I../dependencies/glm -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -isystem ../dependencies/stb -I../src    -o CMakeFiles/ecs.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCTTI_STRING_MAX_LENGTH=1000 -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glad/GL/include -I../dependencies/glfw/include -I../dependencies/glm -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -isystem ../dependencies/stb -I../src  -g -std=c++14 -fcolor-diagnostics   -o CMakeFiles/ecs.dir/examples/ecs/main.cpp.o -c /home/maik/projects/breeze/examples/ecs/main.cpp",
+  "file": "/home/maik/projects/breeze/examples/ecs/main.cpp"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/lib/ccache/bin/cc  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCTTI_STRING_MAX_LENGTH=1000 -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glad/GL/include -I../dependencies/glfw/include -I../dependencies/glm -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -isystem ../dependencies/stb -I../src    -o CMakeFiles/graphics.dir/dependencies/glad/GL/src/glad.c.o   -c /home/maik/projects/breeze/dependencies/glad/GL/src/glad.c",
+  "file": "/home/maik/projects/breeze/dependencies/glad/GL/src/glad.c"
+},
+
+{
+  "directory": "/home/maik/projects/breeze/build",
+  "command": "/usr/bin/ccache clang++  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCTTI_STRING_MAX_LENGTH=1000 -DGLFW_INCLUDE_NONE -DPROJECT_SOURCE_DIR=\\\"/home/maik/projects/breeze\\\" -I../dependencies/glad/GL/include -I../dependencies/glfw/include -I../dependencies/glm -I../dependencies/range-v3/include -I../dependencies/hana/include -I../dependencies/ctti/include -isystem ../dependencies/stb -I../src  -g -std=c++14 -fcolor-diagnostics   -o CMakeFiles/graphics.dir/examples/graphics/main.cpp.o -c /home/maik/projects/breeze/examples/graphics/main.cpp",
+  "file": "/home/maik/projects/breeze/examples/graphics/main.cpp"
+}
+]

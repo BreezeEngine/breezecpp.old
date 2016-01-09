@@ -1,0 +1,48 @@
+[submodule "dependencies/glad"]
+	path = dependencies/glad
+	url = https://github.com/Dav1dde/glad.git
+[submodule "dependencies/glfw"]
+	path = dependencies/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "dependencies/glm"]
+	path = dependencies/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "dependencies/stb"]
+	path = dependencies/stb
+	url = https://github.com/nothings/stb.git
+[submodule "dependencies/hana"]
+	path = dependencies/hana
+	url = https://github.com/boostorg/hana.git
+[submodule "dependencies/range-v3"]
+	path = dependencies/range-v3
+	url = https://github.com/ericniebler/range-v3.git
+[submodule "dependencies/ctti"]
+	path = dependencies/ctti
+	url = https://github.com/Manu343726/ctti.git
+[submodule "dependencies/SDL-mirror"]
+	path = dependencies/SDL-mirror
+	url = https://github.com/spurious/SDL-mirror.git
+[submodule "dependencies/asyncplusplus"]
+	path = dependencies/asyncplusplus
+	url = https://github.com/Amanieu/asyncplusplus.git
+[submodule "dependencies/asio"]
+	path = dependencies/asio
+	url = https://github.com/chriskohlhoff/asio.git
+[submodule "dependencies/log"]
+	path = dependencies/log
+	url = https://github.com/boostorg/log.git
+[submodule "dependencies/utility"]
+	path = dependencies/utility
+	url = https://github.com/boostorg/utility.git
+[submodule "dependencies/uuid"]
+	path = dependencies/uuid
+	url = https://github.com/boostorg/uuid.git
+[submodule "dependencies/enet"]
+	path = dependencies/enet
+	url = https://github.com/lsalzman/enet.git
+[submodule "dependencies/serialization"]
+	path = dependencies/serialization
+	url = https://github.com/boostorg/serialization.git
+[submodule "dependencies/msgpack-c"]
+	path = dependencies/msgpack-c
+	url = https://github.com/msgpack/msgpack-c.git
