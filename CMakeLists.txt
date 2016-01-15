@@ -8,13 +8,14 @@ INCLUDE(ExternalGLFW)
 INCLUDE(ExternalGlad)
 #INCLUDE(ExternalBoostLog)
 add_subdirectory(dependencies/asyncplusplus)
-add_subdirectory(dependencies/enet)
-add_subdirectory(dependencies/serialization/CMake)
+#add_subdirectory(dependencies/enet)
+#add_subdirectory(dependencies/serialization/CMake)
 #add_subdirectory(dependencies/SDL-mirror)
 
 
 #SET (CMAKE_CXX_COMPILER             "/usr/bin/clang++")
-SET (CMAKE_CXX_FLAGS                "-g -std=c++1z -fcolor-diagnostics")
+#SET (CMAKE_CXX_FLAGS                "-g -std=c++14")
+SET (CMAKE_CXX_FLAGS                "-std=c++14 -fcolor-diagnostics")
 include_directories(
   dependencies/glad/GL/include/
   dependencies/glm/
@@ -27,11 +28,14 @@ include_directories(
   dependencies/enet/include
   dependencies/serialization/include
   dependencies/msgpack-c/include
+  dependencies/Optional
   )
 include_directories(SYSTEM dependencies/stb/)
 set( CMAKE_EXPORT_COMPILE_COMMANDS 1 )
 
 include_directories(src)
+include_directories(src/ecs)
+include_directories(src/ecs/core)
 include_directories(src/util)
 include_directories(src/window)
 include_directories(src/network)
@@ -56,11 +60,11 @@ source_group("Headers" FILES ${PROJECT_HEADERS})
 include_directories(src/)
 add_definitions(-DPROJECT_SOURCE_DIR=\"${PROJECT_SOURCE_DIR}\")
 
-add_executable(sdltest ${VENDORS_SOURCES} examples/sdl2/main.cpp )
-
-target_link_libraries(sdltest SDL2-static ${SDL2_LIBRARIES} ${GLAD_LIBRARIES})
-set_target_properties(sdltest PROPERTIES
-  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})
+#add_executable(sdltest ${VENDORS_SOURCES} examples/sdl2/main.cpp )
+#
+#target_link_libraries(sdltest SDL2-static ${SDL2_LIBRARIES} ${GLAD_LIBRARIES})
+#set_target_properties(sdltest PROPERTIES
+#  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})
 
 add_executable(ecs ${VENDORS_SOURCES} examples/ecs/main.cpp )
 target_link_libraries(ecs glfw
@@ -77,7 +81,7 @@ set_target_properties(graphics PROPERTIES
   RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})
 
 add_executable(asioclient ${VENDORS_SOURCES} examples/asio/client.cpp )
-target_link_libraries(asioclient serialization Async++
+target_link_libraries(asioclient Async++
   ${GLFW_LIBRARIES} ${GLAD_LIBRARIES}
   )
 set_target_properties(asioclient PROPERTIES
@@ -89,4 +93,11 @@ target_link_libraries(asioserver Async++
   ${GLFW_LIBRARIES} ${GLAD_LIBRARIES}
   )
 set_target_properties(asioserver PROPERTIES
+  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})
+
+add_executable(handlevec ${VENDORS_SOURCES} examples/handlevec/handlevec.cpp )
+target_link_libraries(handlevec Async++
+  ${GLFW_LIBRARIES} ${GLAD_LIBRARIES}
+  )
+set_target_properties(handlevec PROPERTIES
   RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PROJECT_NAME})

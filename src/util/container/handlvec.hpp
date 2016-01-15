@@ -4,22 +4,41 @@
 #include <vector>
 #include <unordered_map>
 #include <memory>
-
+#include <experimental/optional>
 namespace breeze {
 namespace util {
 namespace container {
 template <class T>
 class handle;
 
+struct handle_id
+{
+  virtual ~handle_id() {}
+};
+
 template <class T>
+struct handle_wrapper : public handle_id
+{
+  std::weak_ptr<handle<T>> _handle;
+  handle_wrapper(std::weak_ptr<handle<T>> h)
+    : _handle(h)
+  {
+  }
+};
+
+template <class T>
+class handle;
+
+template <class T, class Container = std::vector<T>>
 class handle_container
 {
 public:
+  using iterator = typename Container::iterator;
   friend class handle<T>;
   using this_handle = handle<T>;
 
-  std::vector<T> container;
-  std::unordered_map<std::size_t, std::shared_ptr<this_handle>> handle_map;
+  Container container;
+  std::unordered_map<std::size_t, std::shared_ptr<handle<T>>> handle_map;
 
   std::size_t size() { return container.size(); }
   template <class Arg>
@@ -27,9 +46,12 @@ public:
   {
     container.push_back(std::forward<Arg>(arg));
   }
+  auto size() const{
+    return container.size();
+  }
 
   handle_container() = default;
-  handle_container<T>& operator=(const handle_container<T>&) = delete;
+  handle_container& operator=(const handle_container<T>&) = delete;
   handle_container(const handle_container<T>&) = delete;
   handle_container(handle_container<T>&& other)
     : container(std::move(other.container))
@@ -127,20 +149,44 @@ public:
     other.handle_map.insert({ last_index_other, std::move(sp) });
   }
 
-  std::weak_ptr<this_handle> get_handle(size_t index)
+  std::weak_ptr<handle<T>> get_handle(size_t index)
   {
     if (index >= container.size()) {
-      return std::weak_ptr<this_handle>{};
+      return std::weak_ptr<handle<T>>{};
     }
     if (!handle_map.count(index)) {
       handle_map.insert(
-        { index, std::make_shared<this_handle>(this_handle{ this, index }) });
+        { index, std::make_shared<handle<T>>(handle<T>{ this, index }) });
     }
-    return handle_map[index];
+    return std::weak_ptr<handle<T>>{ handle_map[index] };
+  }
+  std::experimental::optional<T> get(std::weak_ptr<handle_id> handle_wp)
+  {
+    std::weak_ptr<handle<T>> w = std::dynamic_pointer_cast<handle<T>>(handle_wp.lock());
+    return get(w);
+  }
+  std::experimental::optional<T> get(std::weak_ptr<handle<T>> handle_wp)
+  {
+    auto hid_sp = handle_wp.lock();
+    if (!hid_sp) {
+      return std::experimental::optional<T>{};
+    }
+    handle<T>* hid = hid_sp.get();
+    if(handle_map[hid->index] != hid_sp){
+      return std::experimental::optional<T>{};
+    }
+    return std::experimental::make_optional(container[hid->index]);
+  }
+
+  auto begin(){
+    return container.begin();
+  }
+  auto end(){
+    return container.end();
   }
 };
 template <class T>
-class handle
+class handle : public handle_id
 {
 public:
   friend class handle_container<T>;
@@ -165,4 +211,4 @@ public:
 }
 }
 
-#endif //HANDLEVEC_H
+#endif // HANDLEVEC_H
